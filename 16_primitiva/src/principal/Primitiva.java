@@ -11,9 +11,6 @@ public class Primitiva {
 		
 		int [] primitiva= new int[6];
 		int generados=0;
-		//comentario de la versión 2
-		//generamos números aleatorios hasta conseguir
-		//seis diferentes
 		while (generados<6) {
 			int n=(int)(Math.random()*49+1);
 			if (!existe(n,generados,primitiva)) {
@@ -31,6 +28,8 @@ public class Primitiva {
 		}
 		
 	public static boolean existe(int n,int total,int[] actual) {
+		//comentario versión 3
+		//comprueba si el número está en el array
 		boolean res=false;
 		for (int i=0;i<total;i++) {
 			if(n==actual[i]) {
