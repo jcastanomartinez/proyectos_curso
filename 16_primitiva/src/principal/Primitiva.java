@@ -11,6 +11,9 @@ public class Primitiva {
 		
 		int [] primitiva= new int[6];
 		int generados=0;
+		//comentario de la versión 2
+		//generamos números aleatorios hasta conseguir
+		//seis diferentes
 		while (generados<6) {
 			int n=(int)(Math.random()*49+1);
 			if (!existe(n,generados,primitiva)) {
