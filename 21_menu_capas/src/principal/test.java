@@ -1,6 +1,5 @@
 package principal;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 import modelo.GestionNotas;
 
@@ -39,9 +38,9 @@ public class test {
 			case 4: 
 					System.out.println("Las notas introducidas son: "); 
 					for (Double n:gn.devolverNotas()) {
-						System.out.print(n+",");
+						System.out.print(n+"\n");
 					}
-					System.out.print("\n");
+					System.out.print("");
 					break;
 					
 			case 5: break;
