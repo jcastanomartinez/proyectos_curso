@@ -46,7 +46,9 @@ public class Test {
 					if (gc.buscarContacto(mailBuscado)!=null) {
 						   Contacto contactoBuscado = new Contacto();
 						   contactoBuscado=gc.buscarContacto(mailBuscado);
-					    	System.out.println("El nombre del contacto buscado es: " + contactoBuscado.getNombre());
+					    	System.out.println("El nombre del contacto  es: " + contactoBuscado.getNombre());
+					}else {
+						System.out.println("El contacto a buscar no existe.");
 					}
 					
 					break;
@@ -58,9 +60,11 @@ public class Test {
 					break;
 					
 			case 4: 
-					Collection<Contacto> contactos=gc.mostrarContactos().values(); 
+					Collection<Contacto> contactos=gc.mostrarContactos().values();
+					System.out.println("La información de los contactos introducidos es: \n");
 					for (Contacto n:contactos) {
-						System.out.print(n.getEmail()+"\n");
+						 System.out.println("Email: " + n.getEmail() + " \nNombre: " + n.getNombre()+ " \n");
+					 
 					}
 					System.out.print("");
 					break;
