@@ -2,11 +2,30 @@ package beans;
 
 public class Contacto {
 
-	String email;
-	String nombre;
-	String direccion;
+	private String email;
+	private String nombre;
+	private String direccion;
+	private Long telefono;
 	
 	
+	public Contacto() {
+		
+	}
+	
+	public Contacto(String email, String nombre, String direccion, Long telefono) {
+		super();
+		this.email = email;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+	}
+	
+	public Long getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(Long telefono) {
+		this.telefono = telefono;
+	}
 	public String getDireccion() {
 		return direccion;
 	}

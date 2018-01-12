@@ -1,6 +1,8 @@
 package modelo;
 
+import java.util.Collection;
 import java.util.HashMap;
+
 import beans.Contacto;
 
 public class GestionContactos {
@@ -31,6 +33,7 @@ public class GestionContactos {
 		}
 		
 	}
+	
 	
 	public HashMap<String,Contacto> mostrarContactos() {
 		return contactos;
