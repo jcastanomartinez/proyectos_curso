@@ -21,7 +21,8 @@ public class Test {
 			System.out.println("2.- Buscar contacto ");
 			System.out.println("3.- Eliminar contacto ");
 			System.out.println("4.- Mostrar todas los contactos ");
-			System.out.println("5.- Salir");
+			System.out.println("5.- Buscar por teléfono ");
+			System.out.println("6.- Salir");
 			System.out.println("");
 			System.out.println("");
 			System.out.println("Seleccione la opción deseada: ");	
@@ -41,7 +42,7 @@ public class Test {
 					contactoAnadido.setDireccion(sc.nextLine());
 					System.out.println("Introduzca el teléfono del contacto: ");
 					contactoAnadido.setTelefono(Long.parseLong(sc.nextLine()));
-					if (gc.anadirContacto(contactoAnadido)) {System.out.println("Contacto añadido.");} else {System.out.println("El contacto ya existe, no se añade.");};
+					if (gc.anadirContacto(contactoAnadido)) {System.out.println("Contacto añadido.");} else {System.out.println("El contacto ya existe, no se añade.");};					
 					System.out.println("");
 					System.out.println("¿Desea añadir otro contacto? (s/n)");					
 					resp=sc.nextLine();
@@ -87,8 +88,18 @@ public class Test {
 					}
 					System.out.print("");
 					break;
+
+			case 5: System.out.println("--------------------------------------------------------------------------------------------------------");
+					System.out.println("Introduzca el teléfono a buscar: ");
+					String telBuscado= sc.nextLine();					
+					if (gc.buscarPorTelefono(Integer.parseInt(telBuscado)) == true) {
+						System.out.println("Teléfono encontrado.");
+					}else {System.out.println("El teléfono no existe.");};
 					
-			case 5: break;
+					
+			case 6: break;
+			
+			
 			default: 
 				System.out.println("La opción introducida no es correcta.");
 				

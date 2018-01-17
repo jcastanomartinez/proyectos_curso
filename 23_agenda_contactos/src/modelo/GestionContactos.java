@@ -9,6 +9,7 @@ public class GestionContactos {
 
 	Contacto contacto = new Contacto();
 	HashMap<String,Contacto> contactos = new HashMap<>(); 
+	boolean res;
 	
 	public boolean anadirContacto(Contacto nuevoContacto) {
 		if (!contactos.containsKey(nuevoContacto.getEmail())) {
@@ -38,4 +39,13 @@ public class GestionContactos {
 	public HashMap<String,Contacto> mostrarContactos() {
 		return contactos;
 	}
+
+	public boolean buscarPorTelefono(int tel) {
+		//String telefono=Integer.toString(tel);
+		//contactos.computeIfPresent(tel,(x,y)->{if (x.equals(Long.toString(y.getTelefono()))) {};
+		res=false;
+		contactos.forEach((k,v) -> {if (v.getTelefono() == tel) res=true;});
+		return res;
+		
+	} 
 }
