@@ -48,4 +48,13 @@ public class GestionContactos {
 		return res;
 		
 	} 
+	
+	public void cambiarDominio(String nuevoDominio) {		
+		contactos.replaceAll((k,v) -> {
+			String emailNuevo=v.getEmail().split("@")[0]+"@"+nuevoDominio;
+			//String emailNuevo = v.getEmail().substring(0, v.getEmail().)
+			v.setEmail(emailNuevo);
+			return v;
+		});
+	}
 }

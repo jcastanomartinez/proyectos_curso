@@ -22,7 +22,8 @@ public class Test {
 			System.out.println("3.- Eliminar contacto ");
 			System.out.println("4.- Mostrar todas los contactos ");
 			System.out.println("5.- Buscar por teléfono ");
-			System.out.println("6.- Salir");
+			System.out.println("6.- Cambiar dominio de los contactos ");
+			System.out.println("7.- Salir");
 			System.out.println("");
 			System.out.println("");
 			System.out.println("Seleccione la opción deseada: ");	
@@ -96,8 +97,13 @@ public class Test {
 						System.out.println("Teléfono encontrado.");
 					}else {System.out.println("El teléfono no existe.");};
 					
+
+			case 6: System.out.println("--------------------------------------------------------------------------------------------------------");
+					System.out.println("Introduzca el nuevo dominio: ");
+					String nuevoDominio= sc.nextLine();
+					gc.cambiarDominio(nuevoDominio);
 					
-			case 6: break;
+			case 7: break;
 			
 			
 			default: 
@@ -105,7 +111,7 @@ public class Test {
 				
 		}
 			
-		}while (opcion!=5);
+		}while (opcion!=7);
 	}
 
 
